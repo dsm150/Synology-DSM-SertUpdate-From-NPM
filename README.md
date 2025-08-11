@@ -85,7 +85,7 @@ TELEGRAM_BOT_TOKEN="***"
 TELEGRAM_CHAT_ID="***"
 
 # Для логов/отчёта
-DOMAIN="jet-net.net"
+DOMAIN="mybest.domain"
 
 # Исключения по рестартам пакетов
 EXCLUDE_PKG_IDS=("ActiveBackup")
