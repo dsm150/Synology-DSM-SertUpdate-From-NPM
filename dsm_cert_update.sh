@@ -21,10 +21,10 @@ export PATH="/usr/sbin:/usr/bin:/bin:/usr/local/bin:$PATH"
 VERBOSE=1 # Уровень логирования 1=подробный лог 0=минимальный лог
 
 # NPM (Nginx Proxy Manager)
-NPM_IP="xxx.xxx.xxx.xxx"
-NPM_USER="LOGIN"
+NPM_IP="192.168.1.1"
+NPM_USER="root"
 NPM_SSH_KEY="/var/services/homes/certbot/.ssh/npm_key" # Подключаемся по ключу
-NPM_CERT_PATH="/root/letsencrypt/archive/npm-2"        # Путь к сертификату на сервере NPM
+NPM_CERT_PATH="/root/letsencrypt/archive/npm-2"        # Путь к сертификату на сервере NPM (имя директории с ключем, можно посмотреть в web панели NPM в разделе SSL Certificates троеточие справа
 
 # Synology DSM
 SYNO_USERNAME="LOGIN"
@@ -42,9 +42,9 @@ TELEGRAM_BOT_TOKEN="BOT_TOKEN"
 TELEGRAM_CHAT_ID="CHAT_ID"
 
 # Прочее
-DOMAIN="ИМЯ_ДОМЕНА_С_КОТОРЫМ_РАБОТАЕМ"
-EXCLUDE_PKG_IDS=("ActiveBackup")   # исключить из рестартов
-INFO_PATH="/usr/syno/etc/certificate/_archive/INFO"
+DOMAIN="mybest.domain"  # для сообщения в Telegram
+EXCLUDE_PKG_IDS=("ActiveBackup")   # исключить из рестартов (использую родной самоподписной серт на многолет)
+INFO_PATH="/usr/syno/etc/certificate/_archive/INFO" # тут скрипт берет инфу о сервисах к которым привязан серт, что бы их рестартнуть
 
 # --------------------------- ВРЕМЕННЫЕ ФАЙЛЫ ----------------------------------
 
